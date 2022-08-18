@@ -34,12 +34,19 @@ public class BaseController<T> {
     @Autowired
     private BaseService<T, String> baseService;
 
+    private T clazz ;
+
+
+    public BaseController(T clazz){
+        this.clazz = clazz;
+    }
 
     @GetMapping("all")
 
     public ResponseEntity<Object> getAll() {
         List<T> baseList = new ArrayList<>();
         try {
+            logger.info("Retrieving the object: " + clazz.toString());
             baseList = baseService.findAll();
         } catch (Exception e) {
             e.printStackTrace();

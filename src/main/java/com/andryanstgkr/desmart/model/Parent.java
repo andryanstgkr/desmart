@@ -1,17 +1,13 @@
 package com.andryanstgkr.desmart.model;
 
-import java.time.LocalDate;
-import javax.persistence.Access;
-import javax.persistence.AccessType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.stereotype.Component;
 
+import javax.persistence.*;
+import java.time.LocalDate;
+
+@Component
 @Getter
 @Setter
 @Entity

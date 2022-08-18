@@ -24,6 +24,14 @@ public class ResidentController extends BaseController<Resident>{
    @Autowired
    private ResidentService residentService;
 
+   @Autowired
+   Resident resident;
+
+   public ResidentController(Resident clazz) {
+      super(clazz);
+      resident = clazz;
+   }
+
    @Override
    @PostMapping("save")
    public ResponseEntity<Object> save(@RequestBody Resident resident) {

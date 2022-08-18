@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-@SpringBootApplication(exclude = {R2dbcAutoConfiguration.class} , scanBasePackages = { "com.andryanstgkr.desmart.controller",  "com.andryanstgkr.desmart.service", "com.andryanstgkr.desmart.repository", "com.andryanstgkr.desmart.config"})
+@SpringBootApplication(exclude = {R2dbcAutoConfiguration.class} , scanBasePackages = { "com.andryanstgkr.desmart.controller",  "com.andryanstgkr.desmart.service", "com.andryanstgkr.desmart.repository", "com.andryanstgkr.desmart.config", "com.andryanstgkr.desmart.model"})
 
 //next NoUniqueBeanDefinitionException, to exclude BaseController or to move to other package
 @EnableJpaRepositories(basePackages = { "com.andryanstgkr.desmart.repository" })

@@ -22,7 +22,15 @@ public class FamilyController extends BaseController<Family> {
    Logger logger = LoggerFactory.getLogger(this.getClass());
 
    @Autowired
+   Family family;
+
+   @Autowired
    private FamilyService familyService;
+
+   public FamilyController(Family clazz) {
+      super(clazz);
+      family = clazz;
+   }
 
    @PostMapping("add-children")
    public ResponseEntity<Object> addChildren(@RequestBody Family family) {

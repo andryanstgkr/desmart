@@ -1,14 +1,17 @@
 package com.andryanstgkr.desmart.model;
 
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.stereotype.Component;
+
 import javax.persistence.Column;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import lombok.Getter;
-import lombok.Setter;
 
 @Getter
 @Setter
+@Component
 public class Group extends BaseEntity{
 
    @Column(name = "name", length = 50, nullable = false)

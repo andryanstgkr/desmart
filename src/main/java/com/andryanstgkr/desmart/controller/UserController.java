@@ -25,6 +25,14 @@ public class UserController extends BaseController<User> {
    @Autowired
    private UserService userService;
 
+   @Autowired
+   User user;
+
+   public UserController(User clazz) {
+      super(clazz);
+      user = clazz;
+   }
+
    @Override
    @PostMapping("save")
    public ResponseEntity<Object> save(@RequestBody User user) {
