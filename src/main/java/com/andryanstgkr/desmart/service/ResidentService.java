@@ -4,14 +4,20 @@ import com.andryanstgkr.desmart.constant.MessageConstant;
 import com.andryanstgkr.desmart.model.Resident;
 import com.andryanstgkr.desmart.predicate.MyPredicate;
 import com.andryanstgkr.desmart.repository.ResidentRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class ResidentService extends BaseService<Resident, String> {
-
+   Logger logger = LoggerFactory.getLogger(this.getClass());
    @Autowired
    private ResidentRepository residentRepository;
+
+   public ResidentService(Resident clazz) {
+      super(clazz);
+   }
 
    @Override
    public Resident update(Resident t, String activity, String id) {

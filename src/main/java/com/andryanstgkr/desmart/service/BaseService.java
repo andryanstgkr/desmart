@@ -1,11 +1,5 @@
 package com.andryanstgkr.desmart.service;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
 import com.andryanstgkr.desmart.constant.MessageConstant;
 import com.andryanstgkr.desmart.constant.ParamConstant;
 import com.andryanstgkr.desmart.repository.BaseRepository;
@@ -19,14 +13,23 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
+import java.util.*;
+
 
 @Service
 @Component
 public abstract class BaseService<T, ID> {
-   Logger logger = LoggerFactory.getLogger(BaseService.class);
+   Logger logger = LoggerFactory.getLogger(this.getClass());
+
+   private T clazz;
+
 
    @Autowired
    private BaseRepository<T, ID> baseRepository;
+
+   public BaseService(T clazz){
+      this.clazz = clazz;
+   }
 
    public T delete(T t) {
       T _t = t;
@@ -67,6 +70,7 @@ public abstract class BaseService<T, ID> {
    }
 
    public List<T> findAll() {
+      logger.info("get ALL " + clazz.getClass());
       List<T> listT = new ArrayList<T>();
       Iterator<T> iteratorT = baseRepository.findAll().iterator();
       iteratorT.forEachRemaining(listT::add);
