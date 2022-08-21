@@ -40,6 +40,7 @@ public class FamilyService extends BaseService<Family, String> {
          newFamily.getChildren().addAll(children);
          return newFamily;
       }
+
       return null;
 
    }
