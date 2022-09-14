@@ -1,12 +1,10 @@
 package com.andryanstgkr.desmart.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import javax.persistence.*;
 
-@Getter
-@Setter
+@Data
 @Entity
 @Table(name = "audit_log")
 @Access(value = AccessType.FIELD)

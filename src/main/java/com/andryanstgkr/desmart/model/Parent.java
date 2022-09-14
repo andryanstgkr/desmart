@@ -1,15 +1,13 @@
 package com.andryanstgkr.desmart.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 
 @Component
-@Getter
-@Setter
+@Data
 @Entity
 @Table(name = "parents")
 @Access(value = AccessType.FIELD)

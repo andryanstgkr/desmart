@@ -68,14 +68,6 @@ public class Resident extends BaseEntity {
    private boolean isAlive = true;
 
    @ManyToOne(fetch = FetchType.EAGER)
-   @JoinColumn(name = "family_id", nullable = true)
-   private Family family;
-
-   @OneToOne(fetch = FetchType.EAGER)
-   @JoinColumn(name = "partner_id", nullable = true)
-   private Resident partner;
-
-   @ManyToOne(fetch = FetchType.EAGER)
    @JoinColumn(name = "sub_village_id", nullable = true)
    private SubVillage subVillage;
 

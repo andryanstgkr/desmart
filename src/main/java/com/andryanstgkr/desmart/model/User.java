@@ -1,14 +1,12 @@
 package com.andryanstgkr.desmart.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 
 @Component
-@Setter
-@Getter
+@Data
 @Entity
 @Table(name = "users")
 @Access(value = AccessType.FIELD)
