@@ -3,10 +3,10 @@ package com.andryanstgkr.desmart.model;
 import lombok.Data;
 import org.springframework.stereotype.Component;
 
-import javax.persistence.Column;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import jakarta.persistence.Column;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Data
 @Component

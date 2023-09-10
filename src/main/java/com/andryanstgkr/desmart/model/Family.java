@@ -3,7 +3,7 @@ package com.andryanstgkr.desmart.model;
 import lombok.Data;
 import org.springframework.stereotype.Component;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.List;
 
 @Component
